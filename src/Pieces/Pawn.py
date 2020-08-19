@@ -1,9 +1,12 @@
+"""Author: Dean Quaife
+Last Edited: 19/08/2020"""
 from src.Pieces.Piece import Piece
 
 class Pawn(Piece):
 
-    """Pawns can act differently on their first move, so they have an attribute m_moved to indicate whether
-    they have moved yet"""
+    """Pawn constructor: Creates a new pawn
+    Pawns have a new field m_moved which indicates whether they have moved yet this game.
+    x, y, player: see Piece.py"""
     def __init__(self, x, y, player):
         super(x, y, player)
         self.m_type = "PAWN"
