@@ -1,5 +1,5 @@
 """Author: Dean Quaife
-Last Edited: 19/08/2020"""
+Last Edited: 24/09/2020"""
 from src.Pieces.Piece import Piece
 
 class Pawn(Piece):
@@ -72,9 +72,7 @@ class Pawn(Piece):
     def _one_forward(self, newX, newY, board):
         abs_y_diff = abs(newY, self.m_y)
         y_diff = newY - self.m_y
-        if abs_y_diff == 1 and board.tiles[newX][newY] is None:
-            if self.colour == "WHITE" and y_diff > 0:
-                return True
-            elif self.colour == "BLACK" and y_diff < 0:
+        if abs_y_diff == 1 and board.tiles[newX][newY] is None and self.m_x == newX:
+            if (self.colour == "WHITE" and y_diff > 0) or (self.colour == "BLACK" and y_diff < 0):
                 return True
         return False
