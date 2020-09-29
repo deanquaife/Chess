@@ -7,7 +7,7 @@ class Knight(Piece):
     """Knight constructor: Creates a new knight
     x, y, player: see Piece.py"""
     def __init__(self, x, y, player):
-        super(x, y, player)
+        super().__init__(x, y, player)
         self.m_type = "KNIGHT"
 
     def move(self, newX, newY, board):
