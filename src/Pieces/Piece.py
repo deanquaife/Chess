@@ -8,7 +8,11 @@ from abc import ABC, abstractmethod
 
 class Piece(ABC):
 
-    """Piece constructor: Creates a new piece"""
+    """Piece constructor: Creates a new piece
+    x: The piece's starting x coordinate
+    y: The piece's starting y coordinate
+    player: The player who owns this piece
+    All of these will be passed in during the creation of a Game"""
     @abstractmethod
     def __init__(self, x, y, player):
         self.m_x = x
@@ -28,4 +32,4 @@ class Piece(ABC):
     """Ease of use"""
     @property
     def colour(self):
-        return self.m_player.colour
+        return self.m_player.m_colour

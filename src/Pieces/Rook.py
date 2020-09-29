@@ -8,7 +8,7 @@ class Rook(Piece):
     Rooks have a field m_moved which indicates whether they have moved yet this game.
     x, y, player: see Piece.py"""
     def __init__(self, x, y, player):
-        super(x, y, player)
+        super().__init__(x, y, player)
         self.m_type = "ROOK"
         self.m_moved = False
 
