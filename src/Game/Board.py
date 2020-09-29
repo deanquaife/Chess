@@ -1,6 +1,6 @@
 """Author: Dean Quaife
-Last Edited: 19/08/2020
-Member fields for the Board class:
+Last Edited: 29/09/2020
+Member fields:
 m_board: A 2D list representing the 8x8 grid of the board
 m_p1: The player moving first (white-side)
 m_p2: The player moving second(black-side)"""
