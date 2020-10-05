@@ -1,5 +1,5 @@
 """Author: Dean Quaife
-Last Edited: 24/09/2020"""
+Last Edited: 05/10/2020"""
 from src.Pieces.Piece import Piece
 
 class King(Piece):
