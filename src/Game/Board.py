@@ -1,5 +1,5 @@
 """Author: Dean Quaife
-Last Edited: 29/09/2020
+Last Edited: 05/10/2020
 Member fields:
 m_board: A 2D list representing the 8x8 grid of the board
 m_game: The game that this board is a part of"""

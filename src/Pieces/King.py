@@ -7,11 +7,10 @@ class King(Piece):
     x, y, player: see Piece.py"""
 
     def __init__(self, x, y, player):
-        super().__init__(x, y, player)
-        self.m_type = "KING"
+        super().__init__(x, y, player, "KING")
 
-    def move(self, newX, newY, board):
-        pass
+    def create_path(self, newX, newY):
+        return []
 
     """Check whether a king can make this move
     newX: the X coordinate we're trying to move to

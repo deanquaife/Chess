@@ -1,5 +1,5 @@
 """Author: Dean Quaife
-Last Edited: 24/09/2020"""
+Last Edited: 05/10/2020"""
 from src.Pieces.Piece import Piece
 
 class Rook(Piece):
@@ -8,12 +8,34 @@ class Rook(Piece):
     Rooks have a field m_moved which indicates whether they have moved yet this game.
     x, y, player: see Piece.py"""
     def __init__(self, x, y, player):
-        super().__init__(x, y, player)
-        self.m_type = "ROOK"
+        super().__init__(x, y, player, "ROOK")
         self.m_moved = False
 
-    def move(self, newX, newY, board):
-        pass
+    def create_path(self, newX, newY):
+        x_dir = 0
+        y_dir = 0
+
+        if newX - self.m_x != 0 and newY == self.m_y: #horizontal move
+            pairs = abs(newX - self.m_x)
+            if max(newX, self.m_x) == newX:
+                x_dir = 1
+            else:
+                x_dir = -1
+
+        else: #vertical move
+            pairs = abs(newY - self.m_y)
+            if max(newY, self.m_y) == newY:
+                y_dir = 1
+            else:
+                y_dir = -1
+
+        path = []
+        if pairs - 1 > 0:
+            for i in range(0, pairs):
+                path[0][i] = newX + x_dir * i
+                path[1][i] = newY + y_dir * i
+
+        return path
 
     """Check whether a rook can make this move
     newX: the X coordinate we're trying to move to

@@ -1,5 +1,5 @@
 """Author: Dean Quaife
-Last Edited: 24/09/2020"""
+Last Edited: 05/10/2020"""
 from src.Pieces.Piece import Piece
 
 class Pawn(Piece):
@@ -8,12 +8,11 @@ class Pawn(Piece):
     Pawns have a new field m_moved which indicates whether they have moved yet this game.
     x, y, player: see Piece.py"""
     def __init__(self, x, y, player):
-        super().__init__(x, y, player)
-        self.m_type = "PAWN"
+        super().__init__(x, y, player, "PAWN")
         self.m_moved = False
 
-    def move(self, newX, newY, board):
-        pass
+    def create_path(self, newX, newY):
+        return []
 
     """Check whether a pawn can make this move
     newX: the X coordinate we're trying to move to

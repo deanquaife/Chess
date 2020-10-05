@@ -1,5 +1,5 @@
 """Author: Dean Quaife
-Last Edited: 24/09/2020"""
+Last Edited: 05/10/2020"""
 from src.Pieces.Piece import Piece
 
 class Knight(Piece):
@@ -7,11 +7,10 @@ class Knight(Piece):
     """Knight constructor: Creates a new knight
     x, y, player: see Piece.py"""
     def __init__(self, x, y, player):
-        super().__init__(x, y, player)
-        self.m_type = "KNIGHT"
+        super().__init__(x, y, player, "KNIGHT")
 
-    def move(self, newX, newY, board):
-        pass
+    def create_path(self, newX, newY):
+        return []
 
     """Check whether a knight can make this move
     newX: the X coordinate we're trying to move to
